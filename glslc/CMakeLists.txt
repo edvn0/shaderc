@@ -71,4 +71,6 @@ if(SHADERC_ENABLE_INSTALL)
     BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif(SHADERC_ENABLE_INSTALL)
 
-add_subdirectory(test)
+if (${SHADERC_ENABLE_TEST})
+    add_subdirectory(test)
+endif()
